@@ -1,8 +1,14 @@
-package org.example;
+package day01_RoadmapQuestionnaire;
 
 import java.util.Scanner;
 
 public class project1_Greeter {
+
+    public static void calculateTimeline(int days) {
+        int weeks = days / 7;
+        int remainingDays = days % 7;
+        System.out.println("👉 That is exactly " + weeks + " weeks and " + remainingDays + " days of focused execution!");
+    }
 
     public static void main(String[] args) {
 
@@ -36,16 +42,21 @@ public class project1_Greeter {
                 int weeks = days / 7;
                 int remainingDays = days % 7;
                 System.out.println("👉 That is exactly " + weeks + " weeks and " + remainingDays + " days of focused execution!");
-            }
-            else if (choice == 2) {
+            } else if (choice == 2) {
                 System.out.println("🚀 'Every master was once a beginner. Keep compiling, keep testing, and don't fear the red text!'");
-            }
-            else if (choice == 3) {
+            } else if (choice == 3) {
                 System.out.println("Closing the environment. Great session today!");
                 keepRunning = false;
-            }
-            else {
+            } else {
                 System.out.println("❌ Invalid choice. Please pick a number from 1 to 3.");
+            }
+            while (keepRunning) {
+                if (choice == 1) {
+                    System.out.println("How many days is your automation roadmap plan? ");
+                    int days = sc.nextInt();
+
+                    calculateTimeline(days);
+                }
             }
         }
 
