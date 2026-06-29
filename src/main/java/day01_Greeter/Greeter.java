@@ -1,8 +1,8 @@
-package day01_RoadmapQuestionnaire;
+package day01_Greeter;
 
 import java.util.Scanner;
 
-public class project1_Greeter {
+public class Greeter {
 
     public static void calculateTimeline(int days) {
         int weeks = days / 7;
